@@ -1,0 +1,40 @@
+/* comprador.component.css */
+.principal{
+  background-image: url('https://images.pexels.com/photos/21393/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: 100%;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: #000000;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  
+}
+
+h2 {
+  color: #333;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+img.card-img-top {
+  border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+  text-align: left;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}

@@ -1,0 +1,45 @@
+<!-- app.component.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" data-bs-theme="dark">
+  <div class="container">
+    <!-- Icono de la tienda agrícola -->
+    <a class="navbar-brand" routerLink="/logout">🌾 Mi Tienda Agrícola</a>
+    <a class="nav-link" routerLink="/main">Inicio</a>
+
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Contenido del navbar -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Enlaces a las páginas -->
+        <li class="nav-item">
+          <!-- <a class="nav-link" routerLink="/">Inicio</a> -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/vendedor">Vendedor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/comprador">Comprador</a>
+        </li>
+      
+
+      <!-- Formulario de búsqueda -->
+      <!-- <form class="d-flex ml-auto">
+        <input class="form-control me-2" style="width: 300px;" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Buscar</button>
+      </form> -->
+      <li class="nav-item" style="margin-left: 220px;" *ngIf="!estaLogeado()">
+        <a class="nav-link" routerLink="/login">Iniciar sesion</a>
+      </li>
+      <li class="nav-item" style="margin-left: 220px;" *ngIf="estaLogeado()">
+        <a class="nav-link" (click)="logout()">Cerrar sesion</a>
+      </li>
+    </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

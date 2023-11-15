@@ -1,0 +1,32 @@
+<body>
+<div class="center-container">
+  <div class="container mt-4 form-container">
+    <form class="form-group row" (ngSubmit)="login(formulario)" #formulario="ngForm">
+      <div class="form-group">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="username" required class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="userType">Tipo de Usuario:</label>
+        <select id="userType" name="userType" [(ngModel)]="userType" class="form-control">
+          <option value="comprador">Comprador</option>
+          <option value="vendedor">Vendedor</option>
+        </select>
+      </div>
+
+      <button type="submit" [disabled]="!formulario.valid" class="btn btn-primary">Iniciar Sesión</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+

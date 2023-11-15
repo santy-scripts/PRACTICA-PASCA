@@ -1,0 +1,27 @@
+<div class="principal">
+  <div class="container mt-4">
+    <h2>Compra productos aquí</h2>
+    <div *ngFor="let producto of productos" class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img [src]="producto.imagen" class="img-fluid rounded-start" alt="Imagen del Producto">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Producto: {{ producto.nombre }}</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" *ngFor="let precio of producto.precios">
+                Precio ({{ precio.unidad }}): {{ precio.precio | currency }}
+              </li>
+            </ul>
+            <button class="btn btn-primary mt-2" (click)="agregarAlCarrito(producto)">Negociar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

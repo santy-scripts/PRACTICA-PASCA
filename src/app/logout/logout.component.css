@@ -1,0 +1,31 @@
+/* tu-estilo.css */
+
+/* Establecer imagen de fondo */
+body {
+    background-image: url('https://images.pexels.com/photos/2165688/pexels-photo-2165688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Estilos para el contenedor principal */
+  .container {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
+  /* Estilos para el título */
+  h4 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilos para el botón */
+  .btn-primary {
+    display: block;
+    margin-top: 1rem;
+
+  }
+  

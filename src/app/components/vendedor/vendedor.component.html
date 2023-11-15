@@ -1,0 +1,30 @@
+<div id="principal">
+  <div class="container mt-5">
+    <div>
+      <label for="nombre">Nombre del Producto:</label>
+      <input type="text" id="nombre" [(ngModel)]="nuevoProducto.nombre" required class="form-control">
+    </div>
+    <!-- Sección de precios -->
+    <div class="bb mt-5" *ngFor="let precio of nuevoProducto.precios; let i = index">
+      <label for="precio{{ i }}" class="form-label">Precio y unidad:</label>
+      <div class="input-group">
+        <input type="number" id="precio{{ i }}" [(ngModel)]="precio.precio" required class="form-control">
+        <select class="selector form-select" [(ngModel)]="precio.unidad">
+          <option value="libra">Libra</option>
+          <option value="kilo">Kilo</option>
+          <option value="arroba">Arroba</option>
+          <option value="bulto">Bulto</option>
+        </select>
+      </div>
+      <button class="btn btn-primary mt-3" (click)="agregarPrecio()">Agregar Precio</button>
+    </div>
+  
+    <!-- Sección de carga de imagen -->
+    <div class="hh mt-4">
+      <label for="imagen">Cargar Imagen:</label>
+      <input type="file" id="imagen" (change)="cargarImagen($event)" class="form-control-file">
+    </div>
+  
+    <button class="btn1 btn-success mt-3" (click)="agregarProducto()">Agregar Producto</button>
+  </div>
+  </div>
